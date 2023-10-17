@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "sphinx-bug-20231017"
 version = "0.0.0"
-description = "MVCE of a bug in Sphinx regarding parsing :meta: fields"
+description = "MVCE for a bug in Sphinx regarding indentation and :meta:"
 readme = "README.md"
 requires-python = ">=3.9"
 license = "MIT"
