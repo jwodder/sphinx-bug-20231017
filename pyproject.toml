@@ -25,3 +25,4 @@ dependencies = ["Sphinx~=7.0"]
 
 [tool.hatch.envs.docs.scripts]
 run = "sphinx-build -E -W -b html docs docs/build"
+info = "sphinx-build --bug-report"
