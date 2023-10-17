@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sphinx-bug-20231017"
+version = "0.0.0"
+description = "MVCE of a bug in Sphinx regarding parsing :meta: fields"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = { paths = ["LICENSE"] }
+authors = [
+    { name = "John Thorvald Wodder II", email = "sphinx-bug-20231017@varonathe.org" }
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mvce"]
+
+[tool.hatch.envs.default]
+python = "3"
+
+[tool.hatch.envs.docs]
+dependencies = [
+    "Sphinx~=7.0",
+    "sphinx_rtd_theme~=1.0",
+]
+
+[tool.hatch.envs.docs.scripts]
+run = "sphinx-build -E -W -b html docs docs/build"
