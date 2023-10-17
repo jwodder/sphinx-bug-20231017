@@ -1,9 +1,9 @@
 project = "sphinx-bug-20231017"
+author = "John Thorvald Wodder II"
+version = "0.0.0"
+release = version
 
-extensions = [
-    "sphinx.ext.autodoc",
-    "sphinx.ext.intersphinx",
-]
+extensions = ["sphinx.ext.autodoc", "sphinx.ext.intersphinx"]
 
 autodoc_default_options = {
     "members": True,
@@ -14,22 +14,14 @@ intersphinx_mapping = {
     "python": ("https://docs.python.org/3", None),
 }
 
-exclude_patterns = ["_build"]
+exclude_patterns = ["build"]
 source_suffix = ".rst"
 source_encoding = "utf-8"
 master_doc = "index"
-version = "0.0.0"
-release = "0.0.0"
 today_fmt = "%Y %b %d"
 default_role = "py:obj"
 pygments_style = "sphinx"
 
-html_theme = "sphinx_rtd_theme"
-html_theme_options = {
-    "collapse_navigation": False,
-    "prev_next_buttons_location": "both",
-}
+html_theme = "alabaster"
 html_last_updated_fmt = "%Y %b %d"
-html_show_sourcelink = True
-html_show_sphinx = True
-html_show_copyright = True
+html_show_copyright = False

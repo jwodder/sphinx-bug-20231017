@@ -21,10 +21,7 @@ packages = ["src/mvce"]
 python = "3"
 
 [tool.hatch.envs.docs]
-dependencies = [
-    "Sphinx~=7.0",
-    "sphinx_rtd_theme~=1.0",
-]
+dependencies = ["Sphinx~=7.0"]
 
 [tool.hatch.envs.docs.scripts]
 run = "sphinx-build -E -W -b html docs docs/build"
